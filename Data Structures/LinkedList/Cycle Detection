@@ -1,0 +1,16 @@
+static boolean hasCycle(SinglyLinkedListNode head) {
+        if(head==null) return false;
+        SinglyLinkedListNode first=head.next;
+        SinglyLinkedListNode second=head;
+        while(first!=null&&second!=null &&first.next!=null){
+            if(first==second){
+                return true;
+            }
+            else{
+                first=first.next.next;
+                second=second.next;
+            }
+        }
+        return false;
+
+    }
