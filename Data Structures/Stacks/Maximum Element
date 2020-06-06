@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Stack<Integer> Stack=new Stack<Integer>();
+        Stack<Integer> Max=new Stack<Integer>();
+        int a=sc.nextInt();
+        for(int i=0;i<a;i++){
+            int c=sc.nextInt();
+            if(c==1){
+                int ele=sc.nextInt();
+                int max=ele;
+                if(!Max.empty()&&ele<Max.peek()){
+                     max=Max.peek();
+                }
+                Stack.add(ele);
+                Max.add(max);
+            }
+            if(c==2){
+                Stack.pop();
+                Max.pop();
+            }
+            if(c==3){
+                System.out.println(Max.peek());
+            }
+        }
+
+    }}
