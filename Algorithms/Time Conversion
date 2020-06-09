@@ -1,0 +1,17 @@
+static String timeConversion(String s) {
+        char[] inChar = s.toCharArray();
+        char[] out = Arrays.copyOfRange(inChar, 0, 8);
+        if(inChar[8] == 'A' && s.substring(0,2).equals("12")) {
+            out[0] = '0';
+             out[1] = '0';
+}
+        else if(inChar[8] =='P' && !s.substring(0,2).equals("12")) {
+                     String a = "" + (Integer.parseInt(s.substring(0,2)) + 12);
+                    char[] f = a.toCharArray();
+                    out[0] = f[0];
+                    out[1] = f[1];
+}               
+        String p=new String(out);
+        return p;
+        
+    }
