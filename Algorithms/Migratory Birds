@@ -1,0 +1,19 @@
+ static int migratoryBirds(List<Integer> arr) {
+      int[] frequency=new int[6];
+      frequency[0]=0;
+      for(int i=0;i<arr.size();i++){
+          frequency[arr.get(i)]++;
+      }
+      int high=0;
+      for(int i=1;i<frequency.length;i++){
+          if(frequency[i]>=high){
+              high=frequency[i];
+          }
+      }
+      int min=5;
+        for(int i=1;i<frequency.length;i++){
+          if(high==frequency[i]&&i<min)
+              min=i;
+          }
+                return min;
+      }
