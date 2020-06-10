@@ -1,6 +1,5 @@
-static String kangaroo(int x1, int v1, int x2, int v2) {
-             ArrayList<Integer> k1=new ArrayList<>();
-             ArrayList<Integer> k2=new ArrayList<>();
+ static String kangaroo(int x1, int v1, int x2, int v2) {
+             
             if(x1==x2) return "YES";
              while(x1<=x2){
                    if(x1==x2) {
