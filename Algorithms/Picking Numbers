@@ -1,0 +1,21 @@
+public static int pickingNumbers(List<Integer> a) {
+    Collections.sort(a);
+    Stack<Integer> st=new Stack<>();
+    st.push(a.get(0));
+    int MaxCount=0;
+    int Count=1;
+    for(int i=1;i<a.size();i++){
+        if(!st.isEmpty()&&Math.abs(st.peek()-a.get(i))<=1){
+            Count++;
+        }
+        else{
+            st.push(a.get(i));
+            Count=1;
+        }
+        if(Count>MaxCount){
+            MaxCount=Count;
+        }
+    }
+    
+    return MaxCount;
+    }
