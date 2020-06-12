@@ -1,0 +1,10 @@
+static int designerPdfViewer(int[] h, String word) {
+        int MaxHeight=0;
+        for(int i=0;i<word.length();i++){
+            int height=h[(word.charAt(i)-97)];
+            if(MaxHeight<height){
+                MaxHeight=height;
+            }
+        }
+        return MaxHeight*word.length();
+    }
