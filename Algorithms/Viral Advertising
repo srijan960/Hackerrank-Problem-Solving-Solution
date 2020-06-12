@@ -1,0 +1,10 @@
+ static int viralAdvertising(int n) {
+        int people=5;
+        int like=0;
+        while(n>0){
+            like+=(people/2);
+            people=(people/2)*3;
+            n--;
+        }
+        return like; 
+    }
