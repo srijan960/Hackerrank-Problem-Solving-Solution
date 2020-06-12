@@ -1,0 +1,16 @@
+   static int sockMerchant(int n, int[] ar) {
+    Stack<Integer> st=new Stack<>();
+    Arrays.sort(ar);
+    st.push(ar[0]);
+    int count=0;
+    for(int i=1;i<ar.length;i++){
+        if(!st.empty()&&st.peek()==ar[i]){
+            st.pop();
+            count++;
+        }
+        else{
+            st.push(ar[i]);
+        }
+    }
+    return count;
+    }   
