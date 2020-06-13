@@ -1,0 +1,32 @@
+static int[] Rotation(int[] a,int k){
+    int[] NewArray=new int[a.length];
+    if(k>a.length){
+        k=k%a.length;
+    }
+    if(k==a.length){
+            return a;
+        }
+    int index=0;
+    for(int i=(a.length-1-(k-1));i<a.length;i++){
+                NewArray[index]=a[i];
+                index++;
+            }
+    for(int i=0;i<(a.length-1-(k-1));i++){
+            NewArray[index]=a[i];
+            if(index<a.length){
+                index++;
+            }
+        }
+
+    return NewArray;
+
+    }
+    
+    static int[] circularArrayRotation(int[] a, int k, int[] queries) {
+        int[] rev=Rotation(a,k);
+        for(int i=0;i<queries.length;i++){
+            queries[i]=rev[queries[i]];
+        }
+        return queries;
+
+        }
