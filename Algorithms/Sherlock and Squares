@@ -1,0 +1,8 @@
+ static int squares(int a, int b) {
+        int values=(int)Math.sqrt(b)-(int)Math.sqrt(a);
+        if(a==(int)Math.sqrt(a)*(int)Math.sqrt(a)){
+            values++;
+        } 
+        return values;
+
+    }
