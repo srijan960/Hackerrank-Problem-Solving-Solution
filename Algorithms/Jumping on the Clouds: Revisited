@@ -1,0 +1,17 @@
+static int jumpingOnClouds(int[] c, int k) {
+        int n=c.length;
+        int currentCloud=k%n;
+        int count=1;
+        if(c[currentCloud]==1){
+             count+=2;
+        }
+        while(currentCloud!=0){
+            currentCloud=(currentCloud+k)%n;
+            count++;
+            if(c[currentCloud]==1){
+                count+=2;
+            }
+        }
+        return 100-count;
+
+    }
