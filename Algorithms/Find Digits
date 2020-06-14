@@ -1,0 +1,12 @@
+static int findDigits(int n) {
+       int count=0;
+       int Number=n;
+       while(n>0){
+          int temp=n%10;
+          if(temp!=0&&Number%temp==0){
+              count++;
+          }
+          n=n/10; 
+       } 
+        return count;
+    }
