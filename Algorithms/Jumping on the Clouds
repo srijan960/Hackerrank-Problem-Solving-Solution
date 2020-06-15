@@ -1,0 +1,13 @@
+static int jumpingOnClouds(int[] c) {
+        int Current=0;
+        int moves=0;
+        while(Current!=c.length-1){
+          if(Current<c.length-2&&c[Current+2]!=1)
+              Current+=2;
+            else
+            Current++;
+            moves++;
+        }
+        return moves;
+
+    }
