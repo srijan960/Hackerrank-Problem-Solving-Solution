@@ -1,0 +1,10 @@
+static int camelcase(String s) {
+    int count=1;
+    for(char ch:s.toCharArray()){
+        if(ch>=65&&ch<=90){
+            count++;
+        }
+    }
+    return count;
+    
+    }
