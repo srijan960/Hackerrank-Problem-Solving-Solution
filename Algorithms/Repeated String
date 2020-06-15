@@ -1,0 +1,25 @@
+ static long repeatedString(String s, long n) {
+       long repeat=n/s.length();
+       int left=(int)(n%s.length());
+       long count=0;
+       for(char ch:s.toCharArray()){
+           if(ch=='a')
+               count++;
+           
+       }
+       count=count*repeat;
+       
+       
+       if(left==0)
+        return count;
+        else{
+            String part=s.substring(0,left);
+            for(char ch:part.toCharArray()){
+                if(ch=='a'){
+                    count++;
+                }
+             }
+            }
+        
+        return count;
+    }
