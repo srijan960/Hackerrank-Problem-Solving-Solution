@@ -1,0 +1,13 @@
+static int minimumDistances(int[] a) {
+        int min=999999;
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]&&(j-i)<min){
+                    min=j-i;
+                }
+            }
+        }
+        min=(min==999999)?-1:min;
+        return min;
+
+    }
