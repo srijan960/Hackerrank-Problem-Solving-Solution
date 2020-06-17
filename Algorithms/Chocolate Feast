@@ -1,0 +1,11 @@
+static int chocolateFeast(int n, int c, int m) {
+    int choc=n/c;
+    int TotalWr=choc;
+    while(TotalWr>=m){
+        int WrToGive=TotalWr-(TotalWr%m);
+        int FreeChoc=WrToGive/m;
+        TotalWr=(TotalWr-WrToGive)+FreeChoc;
+        choc+=FreeChoc;
+    }
+    return choc;
+    }
