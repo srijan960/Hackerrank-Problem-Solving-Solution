@@ -1,0 +1,13 @@
+static int beautifulTriplets(int d, int[] arr) {
+        int triplets=0;
+        Set<Integer> set=new HashSet<>();
+        for(int a:arr){
+            set.add(a);
+        }
+        for(int a:arr){
+            if(set.contains(a+d)&&set.contains(a+d*2)){
+                triplets++;
+            }
+        }
+        return triplets;
+        }
