@@ -1,0 +1,19 @@
+void decode(String s, Node root) {
+        Node current=root;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                current=current.right;
+                if(current.right==null&&current.left==null){
+                    System.out.print(current.data);
+                    current=root;
+                }
+            }
+            if(s.charAt(i)=='0'){
+                current=current.left;
+                if(current.right==null&&current.left==null){
+                    System.out.print(current.data);
+                    current=root;
+        }}}
+
+       
+    }
