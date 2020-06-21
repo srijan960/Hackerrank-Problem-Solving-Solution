@@ -1,0 +1,18 @@
+public static Node insert(Node root,int data) {
+        Node NewNode= new Node(data);
+        if(root==null) return NewNode;
+        Node parent=null;
+        Node current=root;
+        while(current!=null){
+            parent=current;
+            if(current.data<=data){
+                current=current.right;
+            }
+            else {current=current.left;
+        }}
+        if(parent.data<=data){
+            parent.right=NewNode;
+        }
+        else {parent.left=NewNode;}
+    	return root;
+    }
