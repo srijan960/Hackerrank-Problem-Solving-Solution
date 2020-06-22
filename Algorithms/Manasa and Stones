@@ -1,0 +1,12 @@
+static int[] stones(int n, int a, int b) {
+        Set<Integer> set=new TreeSet<Integer>();
+        for(int i=0;i<n;i++){
+            set.add((b*i)+(a*(n-i-1)));
+        }
+        int[] arr=new int[set.size()];
+        int j=0;
+        for(int i:set){
+            arr[j++]=i;
+        }
+        return arr;
+    }
