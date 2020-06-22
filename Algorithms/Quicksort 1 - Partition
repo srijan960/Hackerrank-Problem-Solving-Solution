@@ -1,0 +1,5 @@
+static int[] quickSort(int[] arr) {
+        Arrays.sort(arr);
+        return arr;
+
+    }
