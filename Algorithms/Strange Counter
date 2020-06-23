@@ -1,0 +1,8 @@
+ static long strangeCounter(long t) {
+    long rate = 3;
+    while (t > rate) {
+        t = t - rate;
+        rate = rate * 2;
+    }
+    return rate - t + 1;
+}
