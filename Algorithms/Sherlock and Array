@@ -1,0 +1,27 @@
+ static String balancedSums(List<Integer> arr) {
+        int LeftSum=0;
+        int RightSum=0;
+        boolean found=false;
+        for(int i=0;i<arr.size();i++){
+            int LeftIndex=i-1;
+            int RightIndex=i+1;
+            LeftSum=0;
+            RightSum=0;
+            while(LeftIndex>-1){
+                LeftSum+=arr.get(LeftIndex);
+                LeftIndex--;
+            }
+           while(RightIndex<arr.size()){
+                RightSum+=arr.get(RightIndex);
+                RightIndex++;
+            }   
+            if(LeftSum==RightSum){
+                found=true;
+                break;
+            }
+        }
+        if(arr.size()==1||found){
+            return "YES";
+        }else return "NO";
+
+    }
