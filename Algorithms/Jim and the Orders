@@ -1,0 +1,17 @@
+static int[] jimOrders(int[][] orders) {
+        HashMap<Integer,Integer> res=new HashMap<Integer,Integer>();
+        for(int i=0;i<orders.length;i++){
+            res.put(i,orders[i][0]+orders[i][1]);
+        }
+        List<Map.Entry<Integer,Integer>> list=new ArrayList<>(res.entrySet());
+        Collections.sort(list,new Comparator<Map.Entry<Integer,Integer>>(){
+            public int compare(Map.Entry<Integer,Integer> e1,Map.Entry<Integer,Integer> e2){
+            return e1.getValue()-e2.getValue();
+        }});
+        int[] cus= new int[orders.length];
+        int i=0;
+        for(Map.Entry<Integer,Integer> entry: list){
+            cus[i++]=(entry.getKey()+1);
+        }
+    return cus;
+    }
