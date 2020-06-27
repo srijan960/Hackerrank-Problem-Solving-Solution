@@ -1,0 +1,10 @@
+static int theLoveLetterMystery(String s) {
+        int count = 0;
+        int size=s.length();
+
+        for (int i = 0; i <size/2; i++){    
+            count += Math.abs((int)(s.charAt(i)) - (int)(s.charAt(size-i-1)));
+        }
+return count;
+
+    }
