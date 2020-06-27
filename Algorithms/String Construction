@@ -1,0 +1,9 @@
+static int stringConstruction(String s) {
+        Set<Character> set= new HashSet<>();
+        char[] c=s.toCharArray();
+        for(char ch:c){
+            set.add(ch);
+        }
+        return set.size();
+
+    }
