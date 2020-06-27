@@ -1,0 +1,10 @@
+static int maximizingXor(int l, int r) {
+        int a=l^r;
+        int c=0;
+        while(a!=0){
+            c++;
+            a>>=1;
+        }
+        return (int)(Math.pow(2,c))-1;
+
+    }
